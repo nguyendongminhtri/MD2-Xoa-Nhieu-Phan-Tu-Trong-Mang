@@ -10,15 +10,15 @@ public class Test6 {
         int sizeD;
         int size;
 
-        System.out.println("Nhập vào size: ");
+        System.out.println("Nhập vào size: "); //Size của mảng number tạo ban đầu
         size = scanner.nextInt();
         int[] arrNumber = new int[size];
 
-        for (int i = 0; i < arrNumber.length; i++) {
+        for (int i = 0; i < arrNumber.length; i++) { //Vòng lặp tạo mảng
             System.out.println("Nhập vào phần tử:  " + i);
             arrNumber[i] = scanner.nextInt();
         }
-        for (int number : arrNumber) {
+        for (int number : arrNumber) { //in ra mảng ban đầu
             System.out.print(" " + number);
         }
         System.out.println();
@@ -28,7 +28,7 @@ public class Test6 {
         int sizeAfterDelete = size - sizeD;
         int count = 0;
         int[] newArr = new int[sizeAfterDelete];
-        for (int i = 0; i < arrNumber.length; i++) {
+        for (int i = 0; i < arrNumber.length; i++) { //xử lí logic xóa gán lại mảng mới
             if(count<=sizeAfterDelete){
                 if(arrNumber[i]!=input){
                     newArr[count] = arrNumber[i];
@@ -39,7 +39,7 @@ public class Test6 {
             }
         }
         System.out.println("Mảng sau khi xóa: ");
-        for (int element : newArr) {
+        for (int element : newArr) { //in mảng sau khi xóa
             System.out.print(" " + element);
         }
     }
