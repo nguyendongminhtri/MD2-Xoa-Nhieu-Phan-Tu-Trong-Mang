@@ -22,14 +22,12 @@ public class Test6 {
             System.out.print(" " + number);
         }
         System.out.println();
-        System.out.println("Nhập vào input: ");
+        System.out.println("Nhập vào phần tử cần xóa : ");
         input = scanner.nextInt();
         sizeD = sizeArrDuplicate(arrNumber, input);
-        System.out.println("index = " + sizeD);
         int sizeAfterDelete = size - sizeD;
         int count = 0;
         int[] newArr = new int[sizeAfterDelete];
-        System.out.println("size moi = " + sizeAfterDelete);
         for (int i = 0; i < arrNumber.length; i++) {
             if(count<=sizeAfterDelete){
                 if(arrNumber[i]!=input){
@@ -40,11 +38,12 @@ public class Test6 {
                 }
             }
         }
+        System.out.println("Mảng sau khi xóa: ");
         for (int element : newArr) {
-            System.out.println("Mảng sau khi xóa === " + element);
+            System.out.print(" " + element);
         }
     }
-    static int sizeArrDuplicate(int[] arr, int input) {
+    static int sizeArrDuplicate(int[] arr, int input) { //Hàm lấy ra size của mảng trùng
         int sizeD = 0;
         for (int i = 0; i < arr.length; i++) {
             if (input == arr[i]) {
